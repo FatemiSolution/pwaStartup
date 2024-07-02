@@ -1,0 +1,16 @@
+.idea
+.vscode
+coverage
+node_modules
+
+test-results
+
+.DS_Store
+
+build-stats.json
+npm-debug.log
+merged-schema*.json
+test-report.xml
+test-results.json
+yarn-error.log
+template.generated.html
