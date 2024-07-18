@@ -1,0 +1,8 @@
+query getFormDetails {
+    getFormDetails {
+        id
+        name
+        email
+        message
+    }
+}

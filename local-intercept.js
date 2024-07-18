@@ -17,6 +17,30 @@
  * or modify functionality from its dependencies.
  */
 
-function localIntercept() {}
+
+function localIntercept(targets) {
+    targets.of("@magento/venia-ui").routes.tap((routes) => {
+        routes.push({
+          name: "FormSubmitRoute",
+          pattern: "/formSubmit",
+          path: require.resolve("./src/components/customForm/SubmitForm.js"),
+        },
+        {
+          name: "FormListRoute",
+          pattern: "/formList",
+          path: require.resolve("./src/components/customForm/FormList.js"),
+        },
+        {
+          name: "FormViewRoute",
+          pattern: "/view/:id",
+          path: require.resolve("./src/components/customForm/SingleForm.js"),
+        }
+      
+      
+      );
+        return routes;
+      });
+    
+}
 
 module.exports = localIntercept;
